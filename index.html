@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Program for tarot counsel</title>
+    <link rel="stylesheet" href="css/tarotstyle.css">
+    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+    <script>
+        document.addEventListener("DOMContentLoaded",() =>{
+            const button = document.getElementsByTagName("button")
+            const a = document.querySelectorAll("#page2 section a")
+
+            const b = [...a, ...button];
+
+            b.forEach( i => {
+                i.addEventListener("click", ()=>{
+                    alert("현재 페이지는 작업중입니다. 잠시 기다려 주시면 돌아오겠습니다")
+                })
+            })
+        })//end of script
+    </script>
+</head>
+<body>
+    <div id="layout">
+        <header>
+            <h1>Kim's Tarot counsel room</h1>
+            <p>본 페이지는, 상담을 위한 사이트입니다. 오프라인으로 대면 상담이 어려울 경우
+            해당 사이트를 이용하고 있사오니 자세한 상담은 하단 연락처를 통해 연락 부탁드립니다.<br>
+            감사합니다.
+            </p>
+            <p>
+            보고 싶은 타로를 클릭시 해당 페이지로 이동합니다, 각 타로에 대한 설명은 해당페이지에 적혀있습니다
+            </p>
+            <button type="button" onclick = "location.href = '#'">문의하기</button>
+            <div id="setsumei">
+                <div>
+                    <p><strong>General Reading:</strong><br>
+                    해당 스프레드는 일,주,월에 대한 대략적인 내용을 봅니다.<br>
+                    자세한 내용 보다는 일반적인 내용이므로 가벼운 마음으로 보실 수 있습니다
+                    </p>
+                    <p><strong>Specific Reading:</strong><br>
+                    이 스프레드는 내담자가 보고 싶은 내용이 정확히 어떤건지를 요구하며 막연한 상담주제보다 더 구체적일 수록 명확한 대답을 얻을 수 있습니다<br>
+                    상담사는 내담자의 상담 요청에 따라 그에 맞는 스프레드를 권할 것이며, 상담자의 적극적인 상담 자세를 가지실수록 더욱 좋은 상담내용을 만들어내는 상호작용성 스프레드입니다.
+                    </p>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div id="page1">
+                <h2>General reading</h2>
+                <section>
+                    <a href="Daily.html" class="menu">Daily<br> Tarot</a>
+                    <a href="Weekly.html" class="menu">Weekly<br> Tarot</a>
+                    <a href="Monthly.html" class="menu">Monthly<br> Tarot</a>
+                </section>
+            </div>
+            <div id="page2">
+                <h2>Specific reading</h2>
+                <section>
+                    <a href="3Card.html" class="menu">3Card<br> reading</a>
+                    <a href="#" class="menu">Reading<br> for her/him</a>
+                    <a href="#" class="menu">Celtic<br> Cross</a>
+                </section>
+            </div>
+        </main>
+        <footer>
+            <iframe src="Footer.html" width="100%"></iframe>
+        </footer>
+    </div>
+</body>
+</html>
